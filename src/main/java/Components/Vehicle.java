@@ -1,6 +1,6 @@
 package Components;
 
-abstract class Vehicle {
+public abstract class Vehicle {
 
     String vehicleModel;
     String regNumber;
@@ -12,7 +12,7 @@ abstract class Vehicle {
         this.rentPricePerDay = rentPricePerDay;
     }
 
-    public String getVehicleModel() {
+   /* public String getVehicleModel() {
         return vehicleModel;
     }
     public String getRegNumber() {
@@ -20,5 +20,5 @@ abstract class Vehicle {
     }
     public int getRentPricePerDay() {
         return rentPricePerDay;
-    }
+    }*/
 }

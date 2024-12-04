@@ -1,9 +1,18 @@
 package Components;
 
-interface Rentable {
-    void rentVehicle();
-    void returnVehicle();
-    void calculatedRent();
+import java.util.ArrayList;
+
+public interface Rentable {
+    int rentVehicle(ArrayList<Vehicle> vehicles, ArrayList<Vehicle> rentedVehicles);
+
+    int calculatedRent();
+
+    default void returnVehicle(ArrayList<Vehicle> rentedVehicles) {
+        rentedVehicles.remove(0);
+    }
+
 }
+
+
 
 
