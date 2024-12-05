@@ -17,18 +17,23 @@ public class Car extends Vehicle implements Rentable {
     public String toString() {
         return vehicleModel + " | Registration Number = " + regNumber + " | Rental Price Per Day = " + rentPricePerDay + " SEK" + " | Number of Seats = " + seats;
     }
-    // Overriding rentVehicle 
+    // Overriding rentVehicle
     @Override
     public int rentVehicle(ArrayList<Vehicle> vehicles, ArrayList<Vehicle> rentedVehicles) {
-        Vehicle rentedVehicle = vehicles.get(0); // Gets the first vehicle
-        rentedVehicles.add(rentedVehicle); // Adds it to rented vehicles
+        // Gets the first vehicle in Arraylist vehicles and creates an object of it called rentedVehicle
+        Vehicle rentedVehicle = vehicles.get(0);
+        // Adds rentedVehicle to the Arraylist rentedVehicle
+        rentedVehicles.add(rentedVehicle);
+        // Stores the calculatedRent outcome in integer rentalCost
         int rentalCost = calculatedRent();
+        // Prints what vehicle was rented
         System.out.println("\nVehicle rented: " + rentedVehicle);
+        // Prints the cost
         System.out.println("Rental Cost: " + rentalCost + " SEK\n");
-
         return rentalCost;
     }
-
+    // Overriding calculatedRent - a method that finds out how many days the user want to rent
+    // and multiplies it with the integer rentPricePerDay
     @Override
     public int calculatedRent() {
         Scanner scan = new Scanner(System.in);
