@@ -24,7 +24,7 @@ public class Car extends Vehicle implements Rentable {
         rentedVehicles.add(rentedVehicle); // Adds it to rented vehicles
         int rentalCost = calculatedRent();
         System.out.println("\nVehicle rented: " + rentedVehicle);
-        System.out.println("Rental Cost: " + rentalCost + "\n");
+        System.out.println("Rental Cost: " + rentalCost + " SEK\n");
 
         return rentalCost;
     }

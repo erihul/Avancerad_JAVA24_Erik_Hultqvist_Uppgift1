@@ -1,13 +1,13 @@
 import Components.*;
 
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println("- Welcome to the Virtual Car Rental service -");
         ArrayList<Vehicle> vehicles = new ArrayList<>();
         vehicles.add(new Car("Car", "ABC123",1000, 5));
         vehicles.add(new SUV("SUV", "DEF456",1500, true));
@@ -23,7 +23,7 @@ public class Main {
 
         while (running) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("User Menu");
+        System.out.println("- Main Menu -");
         System.out.println("1. Rent a Vehicle");
         System.out.println("2. Return a Vehicle");
         System.out.println("3. Calculate Rental Cost");
@@ -36,7 +36,7 @@ public class Main {
                 case 1:
                     boolean alreadyRented = rentedVehicles.isEmpty();
                     if (alreadyRented == true) {
-                        System.out.println("\nVehicles to choose from:");
+                        System.out.println("\n- Vehicles to choose from -");
                         for (int i = 0; i < vehicles.size(); i++) {
                             System.out.println((i + 1) + ". " + vehicles.get(i).toString());
                         }
@@ -80,7 +80,7 @@ public class Main {
 
                         String answer = scanner.next();
                         if (answer.equalsIgnoreCase("y")) {
-                            System.out.println("You have returned your rented " + rentedVehicles.get(0).getClass().getSimpleName());
+                            System.out.println("You have returned your rented " + rentedVehicles.get(0).getClass().getSimpleName() + "\n");
                             Rentable rentable = (Rentable) rentedVehicles.get(0);
                             rentable.returnVehicle(rentedVehicles);
                             break;
@@ -107,22 +107,22 @@ public class Main {
                         case 1:
                             Car car = (Car) vehicles.get(0);
                             int calculatedCost = car.calculatedRent();
-                            System.out.println("\nThe price is: " + calculatedCost);
+                            System.out.println("\nThe price is: " + calculatedCost + " SEK");
                             break;
                         case 2:
                             SUV suv = (SUV) vehicles.get(1);
                             int calculatedCost2 = suv.calculatedRent();
-                            System.out.println("\nThe price is: " + calculatedCost2);
+                            System.out.println("\nThe price is: " + calculatedCost2 + " SEK");
                             break;
                         case 3:
                             Truck truck = (Truck) vehicles.get(2);
                             int calculatedCost3 = truck.calculatedRent();
-                            System.out.println("\nThe price is: " + calculatedCost3);
+                            System.out.println("\nThe price is: " + calculatedCost3 + " SEK");
                             break;
                         case 4:
                             Convertible convertible = (Convertible) vehicles.get(3);
                             int calculatedCost4 = convertible.calculatedRent();
-                            System.out.println("\nThe price is: " + calculatedCost4);
+                            System.out.println("\nThe price is: " + calculatedCost4 + " SEK");
                             break;
                         case 5:
                             break;
@@ -148,25 +148,3 @@ public class Main {
         }
     }
 }
-
-/*
-case 2:
-boolean emptyList = rentedVehicles.isEmpty();
-                    if (emptyList == false) {
-        System.out.println("Do you wish to return your " + rentedVehicles.get(0).getClass().getSimpleName() + "? (y/n)");
-
-String answer = scanner.nextLine();
-                        if (answer.equalsIgnoreCase("y")) {
-        System.out.println("You have returned your rented " + rentedVehicles.get(0).getClass().getSimpleName());
-        rentedVehicles.remove(0);
-                            break;
-                                    } else if (answer.equalsIgnoreCase("n")) {
-        break;
-        } else {
-        System.out.println("Invalid choice");
-                            break;
-                                    }
-                                    } else {
-                                    System.out.println("You don't have any rented vehicles");
-                        break;
-                                }*/
