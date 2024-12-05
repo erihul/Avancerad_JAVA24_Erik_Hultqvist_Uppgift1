@@ -27,10 +27,6 @@ public class SUV extends Vehicle implements Rentable{
         return rentalCost;
     }
 
-    /*@Override
-    public void returnVehicle() {
-    }*/
-
     @Override
     public int calculatedRent() {
         Scanner scan = new Scanner(System.in);

@@ -11,14 +11,4 @@ public abstract class Vehicle {
         this.regNumber = regNumber;
         this.rentPricePerDay = rentPricePerDay;
     }
-
-   /* public String getVehicleModel() {
-        return vehicleModel;
-    }
-    public String getRegNumber() {
-        return regNumber;
-    }
-    public int getRentPricePerDay() {
-        return rentPricePerDay;
-    }*/
 }
