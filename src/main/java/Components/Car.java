@@ -5,19 +5,19 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Car extends Vehicle implements Rentable {
-
+    // Car class has a unique attribute in: Seats
     int seats;
-
+    // The car constructor gets it super attributes from Vehicle and its own unique attribute
     public Car(String vehicleModel, String regNumber, int rentPricePerDay, int seats) {
         super(vehicleModel, regNumber, rentPricePerDay);
         this.seats = 5;
     }
-
+    // Overriding toString to make the Car print out as wanted
     @Override
     public String toString() {
         return vehicleModel + " | Registration Number = " + regNumber + " | Rental Price Per Day = " + rentPricePerDay + " SEK" + " | Number of Seats = " + seats;
     }
-
+    // Overriding rentVehicle 
     @Override
     public int rentVehicle(ArrayList<Vehicle> vehicles, ArrayList<Vehicle> rentedVehicles) {
         Vehicle rentedVehicle = vehicles.get(0); // Gets the first vehicle

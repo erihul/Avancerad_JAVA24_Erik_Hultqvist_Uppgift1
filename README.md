@@ -1,5 +1,5 @@
 ###### Avancerad_JAVA24_Erik_Hultqvist_Uppgift1
-# Virtual Car Rental
+# <img src="/pictures/car-rent.png" alt="Car Rental Logo" width="55" align="center"/> Virtual Car Rental
 
 ---
 ## Table of Contents

@@ -1,7 +1,7 @@
 package Components;
-
+// The abstract class, for all the sub-vehicle-classes
 public abstract class Vehicle {
-
+    // Contains three attributes
     String vehicleModel;
     String regNumber;
     int rentPricePerDay;
